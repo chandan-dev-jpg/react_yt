@@ -1,0 +1,29 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;;
+}
+html,body{
+  height:100%;
+  width:100%;
+}
+body{
+ background-color: black;
+ color:red;
+}
+
+.card
+{
+  background-color:maroon;
+  color:white;
+  padding: 20px;
+  gap:5px;
+}
+.nav
+{
+  background-color:gray;
+  color: blue;
+  padding:10px;
+}
