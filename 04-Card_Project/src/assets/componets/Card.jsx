@@ -1,49 +1,44 @@
 // import React from 'react'
-import { Bookmark } from "lucide-react";
 
 const Card = (props) => {
-  console.log(props.company)
+  
   return (
-    <div>
-      <div className="parent">
-        <div className="card">
-<div className="top">
-  <div>
-    <img src="https://tse4.mm.bing.net/th/id/OIP.6BOvnuJ5HvweVJzuIi-H7AHaHa?pid=Api&P=0&h=180" alt="" />
     
+    <div > 
+      <div className="Card">
+        <div className="top">
+          <div>
+            <img  src={props.img}alt="" />
 
-  </div>
-  <div>
+            <h3>{props.name}</h3>
+            <p>{props.role}</p>
 
-    <button >Save <Bookmark/></button>
-  </div>
-</div>
-          <div className="center">
-<div>
-  <h3>{props.company}<span>{props.datePosted}</span></h3>
-  <h3>{props.post}</h3>
-</div>
-<div>
-  <h4>Full Time</h4>
-  <h4>Part time</h4>
-</div>
+            <h3>{props.location}</h3>
+
+            <p>"Building MOdern Web Apps"</p>
           </div>
-          <div className="bottom">
-<div>
+        </div>
 
-  <h4>{props.price}</h4>
-  <p>{props.location}</p>
-</div>
-<div>
-
-<button>Apply</button>
-</div>
+        <div className="center">
+          <div>
+            <h3>{props.followers}</h3>
+            <span>Followers</span>
           </div>
+          <div>
+            <h3>{props.following}</h3>
+            <span>Following</span>
+          </div>
+        </div>
+        <div className="bottom">
+          
+            <button>Follow</button>
+            <button>Message</button>
+        
         </div>
       </div>
     </div>
-  )
-}
+    
+  );
+};
 
-
-export default Card
+export default Card;

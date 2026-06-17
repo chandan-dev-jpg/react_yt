@@ -1,85 +1,72 @@
 // import React from 'react'
-import Card from "./assets/componets/Card";
+import Card from "./assets/componets/Card"
 const App = () => {
-  const jobs = [
-  {
-    brandLogo: "https://logo.clearbit.com/google.com",
-    companyName: "Google",
-    datePosted: "2 days ago",
-    post: "Frontend Developer",
-    tag1: "Full Time",
-    tag2: "Junior Level",
-    pay: "$45/hr",
-    location: "Mumbai, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/microsoft.com",
-    companyName: "Microsoft",
-    datePosted: "5 days ago",
-    post: "React Developer",
-    tag1: "Full Time",
-    tag2: "Senior Level",
-    pay: "$60/hr",
-    location: "Bangalore, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/amazon.com",
-    companyName: "Amazon",
-    datePosted: "1 week ago",
-    post: "UI Developer",
-    tag1: "Part Time",
-    tag2: "Junior Level",
-    pay: "$35/hr",
-    location: "Hyderabad, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/netflix.com",
-    companyName: "Netflix",
-    datePosted: "3 days ago",
-    post: "Frontend Engineer",
-    tag1: "Full Time",
-    tag2: "Senior Level",
-    pay: "$70/hr",
-    location: "Pune, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/adobe.com",
-    companyName: "Adobe",
-    datePosted: "2 weeks ago",
-    post: "JavaScript Developer",
-    tag1: "Part Time",
-    tag2: "Mid Level",
-    pay: "$40/hr",
-    location: "Chennai, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/spotify.com",
-    companyName: "Spotify",
-    datePosted: "4 days ago",
-    post: "Frontend Intern",
-    tag1: "Part Time",
-    tag2: "Junior Level",
-    pay: "$20/hr",
-    location: "Delhi, India",
-  },
-  {
-    brandLogo: "https://logo.clearbit.com/flipkart.com",
-    companyName: "Flipkart",
-    datePosted: "6 days ago",
-    post: "React JS Developer",
-    tag1: "Full Time",
-    tag2: "Mid Level",
-    pay: "$30/hr",
-    location: "Noida, India",
-  },
-];
-console.log(jobs)
+   const users = [
+    {
+      img:"https://images.pexels.com/photos/5439472/pexels-photo-5439472.jpeg",
+      id: 1,
+      name: "John Doe",
+      role: "Frontend Developer",
+      location: "Hyderabad",
+      followers: "1.2k",
+      following: "500"
+    },
+    {
+      img:"https://images.pexels.com/photos/15853819/pexels-photo-15853819.jpeg",
+      id: 2,
+      name: "Chandan Behera",
+      role: "Java Full Stack Developer",
+      location: "Bhubaneswar",
+      followers: "2.5k",
+      following: "800"
+    },
+    {
+      img:"https://images.pexels.com/photos/8453951/pexels-photo-8453951.jpeg",
+      id: 3,
+      name: "Rahul Kumar",
+      role: "Backend Developer",
+      location: "Mumbai",
+      followers: "3k",
+      following: "700"
+    },
+    {
+      img:"https://images.pexels.com/photos/15686678/pexels-photo-15686678.jpeg",
+      id: 4,
+      name: "Priya Sharma",
+      role: "UI/UX Designer",
+      location: "Delhi",
+      followers: "4.1k",
+      following: "900"
+    },
+    {
+      img:"https://images.pexels.com/photos/5058929/pexels-photo-5058929.jpeg",
+      id: 5,
+      name: "Aman Singh",
+      role: "React Developer",
+      location: "Pune",
+      followers: "1.8k",
+      following: "600"
+    }
+  ];
+
   return (
-    <div  className='parent'>
-      {jobs.map(function(elem)
+    <div className="parent">
+     
       {
-        return <Card company={elem.companyName} datePosted={elem.datePosted} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} price={elem.pay} />
-      })}
+        users.map((user) => (
+          <Card
+          img={user.img}
+            key={user.id}
+            name={user.name}
+            role={user.role}
+            location={user.location}
+            followers={user.followers}
+            following={user.following}
+          />
+        ))
+      }
+     
+     
     </div>
   )
 }
