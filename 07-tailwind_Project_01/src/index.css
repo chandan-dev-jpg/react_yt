@@ -1,0 +1,32 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+.parent
+{
+  width:100%;
+  height:100%;
+ justify-content: space-between; 
+ display: flex;
+ gap:10px;
+}
+.Right
+{
+  background-color:#dadada;
+  width:300px;
+  height:300px;
+  border-radius:7px;
+}
+.Left
+{
+  background-color:#dadada;
+  width:300px;
+  height:300px;
+  border-radius: 7px;
+}
